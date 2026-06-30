@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoLógica</title>
+    <style>
+        /* Reset de margens e cor de fundo cinza idêntica ao print */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b3b3b3;
+            color: #333;
+        }
+
+        /* Topo Azul do Blog */
+        header {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container que alinha o conteúdo e a barra lateral */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            display: flex;
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        /* Área dos posts principais (Coluna da esquerda) */
+        .main-content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .post {
+            background-color: white;
+            padding: 20px;
+            border-bottom: 3px solid #0066cc;
+        }
+        .post h2 {
+            color: #0066cc;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        .post .date {
+            font-size: 0.85rem;
+            color: #111;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .post img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+        }
+        .post p {
+            line-height: 1.5;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        .post .read-more {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .post .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Barra Lateral (Coluna da direita) */
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .widget {
+            background-color: white;
+            padding: 15px;
+        }
+        .widget h3 {
+            background-color: #cccccc;
+            color: #333;
+            padding: 8px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .widget ul {
+            list-style: none;
+        }
+        .widget ul li {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .widget .read-more {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .widget .read-more:hover {
+            text-decoration: underline;
+        }
+        .widget.categories ul li {
+            margin-bottom: 8px;
+        }
+        .widget.categories a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .widget.categories a:hover {
+            text-decoration: underline;
+        }
+
+        /* Rodapé Centralizado Branco */
+        footer {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+        footer p {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <h1>TecnoLógica</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Jogos</a>
+            <a href="#">Smartphones</a>
+        </nav>
+    </header>
+
+    <!-- Estrutura de Colunas -->
+    <div class="container">
+        
+        <!-- Conteúdo de Postagens -->
+        <main class="main-content">
+            
+            <!-- Postagem 1 -->
+            <article class="post">
+                <h2>Titulo da postagem 1</h2>
+                <p class="date">postado 04 setembro 2024</p>
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800" alt="Notebook">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#" class="read-more">Leia mais</a>
+            </article>
+
+            <!-- Postagem 2 -->
+            <article class="post">
+                <h2>Titulo da postagem 2</h2>
+                <p class="date">postado 05 setembro 2024</p>
+                <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800" alt="Setup Tech">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et scelerisque quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent nulla turpis, gravida at nunc eu, luctus aliquam justo. Praesent eget risus vehicula.</p>
+                <a href="#" class="read-more">Leia mais</a>
+            </article>
+
+        </main>
+
+        <!-- Barra Lateral Direita -->
+        <aside class="sidebar">
+            
+            <!-- Widget Postagens Recentes -->
+            <div class="widget">
+                <h3>Postagens recentes</h3>
+                <ul>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                        <a href="#" class="read-more">Leia mais</a>
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                        <a href="#" class="read-more">Leia mais</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Widget Categorias -->
+            <div class="widget categories">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Tecnologia</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Smartphones</a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Rodapé com o seu nome definitivo -->
+    <footer>
+        <p>Todos os direitos reservados - Janay Engilde</p>
+    </footer>
+
+</body>
+</html>
